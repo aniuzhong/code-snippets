@@ -4,4 +4,5 @@ project(CodeSnippets C CXX)
 
 add_executable(thread_wrapper thread_wrapper.cpp)
 add_executable(check_byteorder check_byteorder.cpp)
+add_executable(move_if_noexcept move_if_noexcept.cpp)
 
