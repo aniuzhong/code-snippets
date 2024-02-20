@@ -18,8 +18,8 @@ class ThreadWrapper // See [1]
 public:
     ThreadWrapper(const ThreadWrapper&) = delete;
     ThreadWrapper& operator=(const ThreadWrapper&) = delete;
-    ThreadWrapper(ThreadWrapper&&);
-    ThreadWrapper& operator=(ThreadWrapper&&);
+    ThreadWrapper(ThreadWrapper&&) noexcept;
+    ThreadWrapper& operator=(ThreadWrapper&&) noexcept;
     ThreadWrapper(std::function<void()> func);
     ~ThreadWrapper();
 };
@@ -29,13 +29,13 @@ ThreadWrapper::ThreadWrapper(std::function<void()> func)
 {
 }
 
-ThreadWrapper::ThreadWrapper(ThreadWrapper&& other)
+ThreadWrapper::ThreadWrapper(ThreadWrapper&& other) noexcept
     : m_thread_handler(std::move(other.m_thread_handler))
 {
     std::cout << "Move Constructor is called" << std::endl;
 }
 
-ThreadWrapper& ThreadWrapper::operator=(ThreadWrapper&& other)
+ThreadWrapper& ThreadWrapper::operator=(ThreadWrapper&& other) noexcept
 {
     std::cout << "Move Assignment is called" << std::endl;
 
