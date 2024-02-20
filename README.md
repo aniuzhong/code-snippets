@@ -6,3 +6,4 @@
 
 `move_if_noexcept.cpp` mark your move constructors noexcept
 
+`locking_queue.cpp` C++11 blocking queue using the standard library
