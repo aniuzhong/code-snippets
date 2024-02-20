@@ -1,6 +1,8 @@
 // References
 // [1] https://en.cppreference.com/w/cpp/language/cv
 
+#include <mutex>
+
 class ThreadsafeCounter
 {
     mutable std::mutex m; // The "M&M rule": mutable and mutex go together
