@@ -9,3 +9,5 @@
 `locking_queue.cpp` C++11 blocking queue using the standard library
 
 `thread_safe_counter.cpp` A thread safe counter using std::mutex
+
+`thread_guard.cpp` Using RAII to wait for a thread to complete
