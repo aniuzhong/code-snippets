@@ -14,6 +14,9 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 # include_directories(${FFMPEG_INCLUDE_DIRS})
 # include_directories(${CMAKE_SOURCE_DIR}/include)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED yes)
+
 add_executable(thread_wrapper thread_wrapper.cpp)
 add_executable(check_byteorder check_byteorder.cpp)
 add_executable(move_if_noexcept move_if_noexcept.cpp)
